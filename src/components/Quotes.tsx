@@ -1,33 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
-import andrewNg from "@/assets/andrew-ng.jpg";
-import geoffreyHinton from "@/assets/geoffrey-hinton.jpg";
-import yannLeCun from "@/assets/yann-lecun.jpg";
-import samAltman from "@/assets/sam-altman.jpg";
 
 const quotes = [
   {
     quote: "AI is the new electricity. Just as electricity transformed almost everything 100 years ago, today I actually have a hard time thinking of an industry that I don't think AI will transform in the next several years.",
     author: "Andrew Ng",
-    role: "Co-founder of Coursera, Former head of Baidu AI",
-    image: andrewNg
+    role: "Co-founder of Coursera, Former head of Baidu AI"
   },
   {
     quote: "If the perception is that AI is going to take over the world, then we need to be concerned about that. But if you actually look at what's happening, it's not nearly as scary as it sounds.",
     author: "Geoffrey Hinton",
-    role: "Godfather of AI, Turing Award Winner",
-    image: geoffreyHinton
+    role: "Godfather of AI, Turing Award Winner"
   },
   {
     quote: "Our intelligence is what makes us human, and AI is an extension of that quality. The future is about augmenting human intelligence, not replacing it.",
     author: "Yann LeCun",
-    role: "Chief AI Scientist at Meta",
-    image: yannLeCun
+    role: "Chief AI Scientist at Meta"
   },
   {
     quote: "The development of AI is as fundamental as the creation of the microprocessor, the personal computer, the Internet, and the mobile phone. It will change the way people work, learn, travel, get health care, and communicate with each other.",
     author: "Sam Altman",
-    role: "CEO of OpenAI",
-    image: samAltman
+    role: "CEO of OpenAI"
   }
 ];
 
@@ -55,23 +47,13 @@ const Quotes = () => {
             >
               <CardContent className="p-8">
                 <div className="flex flex-col gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="relative">
-                      <img 
-                        src={item.image} 
-                        alt={item.author}
-                        className="w-20 h-20 rounded-full object-cover border-2 border-primary/50 group-hover:border-primary transition-all glow-cyan"
-                      />
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-display font-semibold text-primary">
-                        {item.author}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {item.role}
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-xl font-display font-semibold text-primary mb-1">
+                      {item.author}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {item.role}
+                    </p>
                   </div>
                   
                   <div className="relative">

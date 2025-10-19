@@ -2,6 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
 import techPattern from "@/assets/tech-pattern.jpg";
+import caseManagement from "@/assets/case-management.jpg";
+import trafficSystem from "@/assets/traffic-system.jpg";
+import clothSegregation from "@/assets/cloth-segregation.jpg";
 
 const projects = [
   {
@@ -10,7 +13,8 @@ const projects = [
     description: "Created a comprehensive software platform utilizing artificial intelligence to streamline case management processes, improving efficiency, accuracy, and decision-making in legal and administrative workflows.",
     details: "Integrated natural language processing (NLP - BERT) and advanced data analytics to automate document analysis, case categorization, and information retrieval, reducing manual effort by 40% and enhancing case resolution speed by 30%.",
     tags: ["AI", "NLP", "BERT", "Data Analytics"],
-    gradient: "from-cyan-500 to-blue-500"
+    gradient: "from-cyan-500 to-blue-500",
+    image: caseManagement
   },
   {
     title: "Traffic Management System",
@@ -18,7 +22,8 @@ const projects = [
     description: "Developed a robust software solution leveraging artificial intelligence and Computer Vision to optimize traffic congestion, dynamically adjusting traffic signal timing according to lane density.",
     details: "Implemented a priority-based algorithm built on round-robin concepts to dynamically select signal lanes, effectively reducing waiting times and improving traffic flow.",
     tags: ["Computer Vision", "AI", "Optimization"],
-    gradient: "from-purple-500 to-pink-500"
+    gradient: "from-purple-500 to-pink-500",
+    image: trafficSystem
   },
   {
     title: "Industrial Cloth Segregation System",
@@ -26,7 +31,8 @@ const projects = [
     description: "Developed an AI-integrated cloth segregation system utilizing an AS7265 spectral sensor for real-time material identification and suction-based automated handling.",
     details: "Engineered an efficient, sensor-driven sorting mechanism eliminating manual intervention, optimizing material recovery processes for waste management applications.",
     tags: ["AI", "IoT", "Sensors", "Automation"],
-    gradient: "from-green-500 to-teal-500"
+    gradient: "from-green-500 to-teal-500",
+    image: clothSegregation
   }
 ];
 
@@ -52,11 +58,19 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="glass border-border hover-glow group cursor-pointer animate-fade-in"
+              className="glass border-border hover-glow group cursor-pointer animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient}`}></div>
+              </div>
               <CardHeader>
-                <div className={`h-2 w-full bg-gradient-to-r ${project.gradient} rounded-full mb-4 opacity-80 group-hover:opacity-100 transition-opacity`}></div>
                 <CardTitle className="text-xl font-display group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
