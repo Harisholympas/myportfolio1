@@ -1,10 +1,21 @@
 import { Github, Linkedin, Mail, Phone, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="max-w-6xl w-full">
+    <section 
+      id="home" 
+      className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-background/80"></div>
+      <div className="max-w-6xl w-full relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold">

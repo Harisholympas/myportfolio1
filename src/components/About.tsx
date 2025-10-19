@@ -1,7 +1,18 @@
+import aiBrain from "@/assets/ai-brain.jpg";
+
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-20 px-4 relative overflow-hidden">
+      <div 
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-10"
+        style={{
+          backgroundImage: `url(${aiBrain})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'right center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-12">
           About <span className="text-gradient">Me</span>
         </h2>

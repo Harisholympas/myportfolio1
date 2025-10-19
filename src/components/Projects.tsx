@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
+import techPattern from "@/assets/tech-pattern.jpg";
 
 const projects = [
   {
@@ -31,8 +32,18 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
-      <div className="max-w-6xl mx-auto">
+    <section 
+      id="projects" 
+      className="py-20 px-4 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${techPattern})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-background/90"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-12">
           Featured <span className="text-gradient">Projects</span>
         </h2>
