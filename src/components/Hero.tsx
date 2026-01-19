@@ -61,7 +61,7 @@ const Hero = () => {
               <Mail className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/harish-t-80b406291/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors p-2 hover-glow rounded-lg"
@@ -70,7 +70,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/Harisholympas" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors p-2 hover-glow rounded-lg"
@@ -79,7 +79,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="tel:9047996565"
+              href="tel:+91 9047996565"
               className="text-foreground hover:text-primary transition-colors p-2 hover-glow rounded-lg"
               aria-label="Phone"
             >
