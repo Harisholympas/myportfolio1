@@ -19,13 +19,13 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Connect on LinkedIn",
-    href: "https://linkedin.com"
+    href: "https://www.linkedin.com/in/harish-t-80b406291/"
   },
   {
     icon: Github,
     label: "GitHub",
     value: "View GitHub Profile",
-    href: "https://github.com"
+    href: "https://github.com/Harisholympas"
   }
 ];
 
